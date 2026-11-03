@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> header </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, "Malgun Gothic", sans-serif;
+            color: #202124;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        header {
+            max-width: 1400px;
+            width: 90%;
+            height: 100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo img {
+            width: 80px;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .utility {
+            display: flex;
+            justify-content: space-between;
+            gap: 18px;
+            align-items: center;
+        }
+
+        .utility span {
+            font-size: 28px;
+        }
+
+        .use {
+            padding: 5px 20px;
+            background-color: white;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 18px;
+            color: #3F40F2;
+            border: 3px solid #3F40F2;
+
+        }
+
+        .utility .search {
+            padding: 5px 20px;
+            background-color: white;
+            border-radius: 20px;
+            font-size: 18px;
+            font-weight: 300;
+            border: 3px solid black;
+            color: #838383;
+        }
+
+        .utility .search i {
+            color: black;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        nav a {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        nav span {
+            color: #3F40F2;
+        }
+
+        .hero {
+            width: 100%;
+            margin-top: 30px;
+            position: center;
+            text-align: center;
+            margin-bottom: 100px;
+
+        }
+
+        .hero img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .sec1 {
+            width: 90%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .sec1 h2 {
+            font-size: 25px;
+            letter-spacing: -0.5px;
+        }
+
+
+        .best {
+            display: flex;
+            justify-content: space-between;
+            gap: 2%;
+            margin-top: 24px;
+            margin-bottom: 100px;
+        }
+
+        .best-album {
+            width: 18%;
+        }
+
+        .best-album img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 14px;
+        }
+
+        .best-album h3 {
+            margin-top: 12px;
+            font-size: 17px;
+            line-height: 1.4;
+        }
+
+        .best-album p {
+            margin-top: 6px;
+            color: #777;
+            font-size: 14px;
+        }
+
+
+        .new {
+            display: flex;
+            justify-content: space-between;
+            gap: 2%;
+            margin-top: 24px;
+            margin-bottom: 100px;
+        }
+
+        .new-album {
+            width: 18%;
+        }
+
+        .new-album img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 14px;
+        }
+
+        .new-album h3 {
+            margin-top: 12px;
+            font-size: 17px;
+            line-height: 1.4;
+        }
+
+        .new-album p {
+            margin-top: 6px;
+            color: #777;
+            font-size: 14px;
+        }
+
+
+
+        .playlist {
+            display: flex;
+            justify-content: space-between;
+            gap: 1%;
+            margin-top: 24px;
+            margin-bottom: 100px;
+        }
+
+        .playlist-box {
+            width: 13%;
+        }
+
+        .playlist-box img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .sec2 {
+            width: 90%;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .sec2 h2 {
+            font-size: 25px;
+            letter-spacing: -0.5px;
+        }
+
+        .mp4 {
+            width: 100%;
+            position: center;
+            text-align: center;
+            margin-bottom: 100px;
+        }
+
+        .mp4 iframe {
+            width: 100%;
+            max-width: 1600px;
+            border: 0;
+            border-radius: 50px;
+        }
+
+        .potcast1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 25px;
+            margin-bottom: 50px;
+            gap: 2%;
+        }
+
+        .potcast2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 100px;
+            gap: 2%;
+        }
+
+        .potcast-box {
+            width: 32%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 8px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .p1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            font-size: 20px;
+            font-weight: 400;
+
+        }
+
+        .p1 img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .recommend {
+            width: 90%;
+            max-width: 1920px;
+            margin: 0 auto;
+            margin-bottom: 100px;
+        }
+
+        .recommend h2 {
+            font-size: 25px;
+            letter-spacing: -0.5px;
+        }
+
+        .recommend-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10 px;
+            margin-top: 24px;
+        }
+
+        .recommend-box1 {
+            width: 32%;
+            text-align: center;
+        }
+
+        .recommend-box2 {
+            width: 32%;
+            text-align: center;
+        }
+
+        .recommend-box3 {
+            width: 32%;
+            text-align: center;
+        }
+
+        .recommend-wrap img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 14px;
+        }
+
+        footer {
+            width: 100%;
+            margin: 0 auto;
+            background-color: #F9F8F8;
+            padding: 45px 0;
+        }
+
+        .footer {
+            width: 90%;
+            max-width: 1800px;
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin: 0 auto;
+        }
+
+        .footer-inner {
+            width: 20%;
+            padding-top: 20px;
+            line-height: 30px;
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        .footer-inner h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .f-sns {
+            width: auto;
+            height: 70px;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            font-size: 30px;
+        }
+
+        @media (max-width: 900px) {
+            header {
+                height: auto;
+                padding: 20px 0;
+                flex-wrap: wrap;
+            }
+
+            .utility {
+                flex-wrap: wrap;
+            }
+
+            .best,
+            .new,
+            .playlist,
+            .potcast1,
+            .potcast2,
+            .footer {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .best-album,
+            .new-album {
+                width: 30%;
+            }
+
+            .playlist-box {
+                width: 22%;
+            }
+
+            .potcast-box {
+                width: 47%;
+            }
+
+            .footer-inner {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .utility .search {
+                font-size: 13px;
+            }
+
+            .best-album,
+            .new-album,
+            .potcast-box {
+                width: 45%;
+            }
+
+            .p1 {
+                font-size: 14px;
+            }
+
+            .p1 img {
+                width: 55px;
+                height: 55px;
+            }
+
+            .mp4 iframe {
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo"> <img src="img2/FLOLOGO.png"> </div>
+        <div class="utility">
+            <button class="use"> 이용권 </button>
+            <span class="search"> 곡, 앨범, 아티스트, 플레이리스트 검색 <i class="fa-solid fa-magnifying-glass"></i> </span>
+            <span><i class="fa-solid fa-folder-open"></i></span>
+            <span><i class="fa-solid fa-podcast"></i></span>
+        </div>
+        <nav>
+            <a href="#"><span>FLO차트</span></a>
+            <a href="#">로그인</a>
+            <a href="#">회원가입</a>
+        </nav>
+    </header>
+    <section class="hero"><img src="img2/mainbanner.png"> </section>
+    <section class="sec1">
+        <h2>인기앨범 <i class="fa-solid fa-angle-right"></i></h2>
+        <div class="best">
+            <div class="best-album">
+                <img src="img2/sos.png">
+                <h3>SOS</h3>
+                <p>SIZER</p>
+            </div>
+            <div class="best-album">
+                <img src="img2/best2.png">
+                <h3>저금통</h3>
+                <p>E SENS</p>
+            </div>
+            <div class="best-album">
+                <img src="img2/best3.png">
+                <h3>Oh yeah?</h3>
+                <p>Steve Lacy</p>
+            </div>
+            <div class="best-album">
+                <img src="img2/best4.png">
+                <h3>Deja Vu</h3>
+                <p>RESCENE</p>
+            </div>
+            <div class="best-album">
+                <img src="img2/best5.png">
+                <h3>Out of time</h3>
+                <p>The Weeknd</p>
+            </div>
+        </div>
+        <h2>최신앨범 <i class="fa-solid fa-angle-right"></i></h2>
+        <div class="new">
+            <div class="new-album">
+                <img src="img2/new1.png">
+                <h3>THIS&THAT</h3>
+                <p>STRAY KIDS</p>
+            </div>
+            <div class="new-album">
+                <img src="img2/new2.png">
+                <h3>Thursday</h3>
+                <p>쿠기, 릴러말즈, Crush</p>
+            </div>
+            <div class="new-album">
+                <img src="img2/new3.png">
+                <h3>Serenade</h3>
+                <p>aespa</p>
+            </div>
+            <div class="new-album">
+                <img src="img2/new4.png">
+                <h3>adrenaline</h3>
+                <p>나플라(nafla)</p>
+            </div>
+            <div class="new-album">
+                <img src="img2/new5.png">
+                <h3>Less than a lover</h3>
+                <p>제니(JENNIE)</p>
+            </div>
+        </div>
+        <h2>아티스트 플리 <i class="fa-solid fa-angle-right"></i></h2>
+        <div class="playlist">
+            <div class="playlist-box">
+                <img src="img2/hanroro.png">
+            </div>
+            <div class="playlist-box">
+                <img src="img2/bts.png">
+            </div>
+            <div class="playlist-box">
+                <img src="img2/kendrick.png">
+            </div>
+            <div class="playlist-box">
+                <img src="img2/bigbang.png">
+            </div>
+            <div class="playlist-box">
+                <img src="img2/njz.png">
+            </div>
+            <div class="playlist-box">
+                <img src="img2/travis1.png">
+            </div>
+            <div class="playlist-box">
+                <img src="img2/travis2.png">
+            </div>
+        </div>
+    </section>
+    <section class="sec2">
+        <div class="mp4">
+            <iframe width="1600" height="400" src="https://www.youtube.com/embed/FQfPoAJC2_E?si=BdO6353FHiUGsW3k"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <h2>음악 팟캐스트</h2>
+        <div class="potcast">
+            <div class="potcast1">
+                <div class="potcast-box">
+                    <div class="p1">
+                        <img src="img2/potcast1.png">
+                        <p> Sound Of Music</p>
+                    </div>
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <div class="potcast-box">
+                    <div class="p1">
+                        <img src="img2/potcast2.png">
+                        <p> PLAY IT LOUD</p>
+                    </div>
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <div class="potcast-box">
+                    <div class="p1">
+                        <img src="img2/potcast3.png">
+                        <p> GENRE.zip</p>
+                    </div>
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+            </div>
+            <div class="potcast2">
+                <div class="potcast-box">
+                    <div class="p1">
+                        <img src="img2/potcast4.png">
+                        <p> Episode SMTM</p>
+                    </div>
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <div class="potcast-box">
+                    <div class="p1">
+                        <img src="img2/potcast5.png">
+                        <p> TRACK 777</p>
+                    </div>
+                    <i class="fa-solid fa-ellipsis"></i>
+
+                </div>
+                <div class="potcast-box">
+                    <div class="p1">
+                        <img src="img2/potcast6.png">
+                        <p> Sound ON</p>
+                    </div>
+                    <i class="fa-solid fa-ellipsis"></i>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="recommend">
+        <h2> 추천음악 </h2>
+        <div class="recommend-wrap">
+            <div class="recommend-box1">
+                <img src="img2/recommend1.png">
+            </div>
+            <div class="recommend-box2">
+                <img src="img2/recommend2.png">
+            </div>
+            <div class="recommend-box3">
+                <img src="img2/recommend3.png">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="footer-inner">
+                <h3>고객센터</h3>
+                <h3>공지사항</h3>
+            </div>
+            <div class="footer-inner">
+                <h3>FLO서비스</h3>
+                <p>서비스 소개</p>
+                <p>FLO 플레이어 다운로드</p>
+            </div>
+            <div class="footer-inner">
+                <h3>기업홍보</h3>
+                <p>회사 소개</p>
+                <p>인재 채용</p>
+            </div>
+            <div class="footer-inner">
+                <h3>문의</h3>
+                <p>마케팅 · 광고 · 제휴 문의</p>
+                <p>서비스 이용 문의</p>
+                <p>음원 유통 문의</p>
+            </div>
+            <div class="f-sns">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
